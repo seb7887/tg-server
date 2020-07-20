@@ -10,10 +10,12 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
     "baseUrl": "./",
     "paths": {
       "@resolvers/*": ["./src/schema/resolvers/*"],
+      "@inputs/*": ["./src/schema/inputs/*"],
+      "@interfaces/*": ["./src/schema/interfaces/*"],
       "@schema": ["./src/schema/index.ts"],
       "@entities/*": ["./src/entities/*"]
     }

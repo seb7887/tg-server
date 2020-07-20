@@ -23,6 +23,11 @@ export class Initial1595214887670 implements MigrationInterface {
             isPrimary: true,
           },
           {
+            name: 'name',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
             name: 'email',
             type: 'varchar',
             isNullable: false,

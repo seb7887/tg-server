@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions'
 
-const typeOrmConfig: PostgresConnectionOptions = {
+export const typeOrmConfig: PostgresConnectionOptions = {
   type: 'postgres',
   host: process.env.TYPEORM_HOST,
   port: 5432,
@@ -24,5 +24,3 @@ const typeOrmConfig: PostgresConnectionOptions = {
     subscribersDir: 'src/subscribers',
   },
 }
-
-export default typeOrmConfig
