@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "build",
+    "strict": true,
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": ["es2018", "ESNext.AsyncIterable"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": true,
+    "baseUrl": "./",
+    "paths": {
+      "@resolvers/*": ["./src/schema/resolvers/*"],
+      "@schema": ["./src/schema/index.ts"],
+      "@entities/*": ["./src/entities/*"]
+    }
+  }
+}
