@@ -8,14 +8,14 @@ import { createSchema } from '@schema'
 const startServer = async () => {
   const schema = await createSchema()
 
-  try {
-    await createConnection(typeOrmConfig)
-  } catch (err) {
-    throw err
-  }
+  await createConnection(typeOrmConfig)
 
   const server = new ApolloServer({
     schema,
+    context: ({ req, res }) => ({
+      req,
+      res,
+    }),
   })
 
   await server.listen(4000)

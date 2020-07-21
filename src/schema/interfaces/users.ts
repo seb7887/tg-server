@@ -18,3 +18,11 @@ export class SignUpResponse implements Response {
   @Field()
   message: string
 }
+
+@ObjectType({ implements: Response })
+export class LoginResponse implements Response {
+  jwt?: string
+
+  @Field()
+  message: string
+}

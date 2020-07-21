@@ -17,7 +17,8 @@
       "@inputs/*": ["./src/schema/inputs/*"],
       "@interfaces/*": ["./src/schema/interfaces/*"],
       "@schema": ["./src/schema/index.ts"],
-      "@entities/*": ["./src/entities/*"]
+      "@entities/*": ["./src/entities/*"],
+      "@lib/*": ["./src/lib/*"]
     }
   }
 }
