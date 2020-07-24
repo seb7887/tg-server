@@ -84,12 +84,12 @@ export class Initial1595214887670 implements MigrationInterface {
             default: `timezone('utc'::text, now())`,
           },
           {
-            name: 'sender',
+            name: 'sender_id',
             type: 'uuid',
             isNullable: false,
           },
           {
-            name: 'recipient',
+            name: 'recipient_id',
             type: 'uuid',
             isNullable: false,
           },
@@ -101,7 +101,7 @@ export class Initial1595214887670 implements MigrationInterface {
     await queryRunner.createForeignKey(
       'messages',
       new TableForeignKey({
-        columnNames: ['sender'],
+        columnNames: ['sender_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'users',
         onDelete: 'CASCADE',
@@ -111,7 +111,7 @@ export class Initial1595214887670 implements MigrationInterface {
     await queryRunner.createForeignKey(
       'messages',
       new TableForeignKey({
-        columnNames: ['recipient'],
+        columnNames: ['recipient_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'users',
         onDelete: 'CASCADE',
