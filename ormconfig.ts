@@ -9,9 +9,9 @@ export const typeOrmConfig: PostgresConnectionOptions = {
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
   synchronize: false,
-  entities: ['src/entities/**/*.ts'],
-  migrations: ['src/migration/**/*.ts'],
-  subscribers: ['src/subscribers/**/*.ts'],
+  entities: [process.env.TYPEORM_ENTITIES!],
+  migrations: [process.env.TYPEORM_MIGRATIONS!],
+  subscribers: [process.env.TYPEORM_SUBSCRIBERS!],
   extra: {
     ssl: {
       rejectUnauthorized: false,

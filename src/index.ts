@@ -1,3 +1,4 @@
+import 'module-alias/register'
 import 'reflect-metadata'
 import { ApolloServer } from 'apollo-server'
 import { createConnection } from 'typeorm'

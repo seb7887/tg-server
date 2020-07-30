@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon",
-    "start": "node build/index.js",
+    "start": "node build/src/index.js",
     "migrate:create": "ts-node node_modules/.bin/typeorm migration:create",
     "migrate": "ts-node node_modules/.bin/typeorm migration:run",
     "migrate:revert": "ts-node node_modules/.bin/typeorm migration:revert",
@@ -51,10 +51,19 @@
     "dataloader": "^2.0.0",
     "graphql": "^15.3.0",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "pg": "^8.3.0",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.0.0-rc.3",
     "typeorm": "^0.2.25"
+  },
+  "_moduleAliases": {
+    "@resolvers": "build/src/schema/resolvers",
+    "@inputs": "build/src/schema/inputs",
+    "@interfaces": "build/src/schema/interfaces",
+    "@schema": "build/src/schema/index.js",
+    "@entities": "build/src/entities",
+    "@lib": "build/src/lib"
   },
   "jest": {
     "moduleFileExtensions": [
