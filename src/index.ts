@@ -19,8 +19,8 @@ const startServer = async () => {
     }),
   })
 
-  await server.listen(4000)
-  console.log('Apollo Server listening on port 4000')
+  await server.listen(process.env.PORT)
+  console.log(`Apollo Server listening on port ${process.env.PORT!}`)
 }
 
 startServer()
