@@ -5,6 +5,7 @@ import {
   Column,
   ManyToOne,
   OneToOne,
+  JoinColumn,
   CreateDateColumn,
 } from 'typeorm'
 import { ObjectType, Field, ID } from 'type-graphql'
@@ -34,7 +35,9 @@ export class Message extends BaseEntity {
   @Column({ name: 'recipient_id' })
   recipientId: string
 
-  @ManyToOne(() => Chat)
+  @Field(() => Chat)
+  @ManyToOne(() => Chat, chat => chat.id)
+  @JoinColumn({ name: 'chat_id' })
   chat: Chat
   @Column({ name: 'chat_id' })
   chatId: string

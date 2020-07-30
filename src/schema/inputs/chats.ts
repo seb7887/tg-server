@@ -1,13 +1,13 @@
 import { InputType, Field } from 'type-graphql'
 
 @InputType()
-export class NewMessageInput {
+export class NewChatInput {
   @Field()
-  content: string
+  name: string
 
   @Field()
-  chatId: string
+  to: string
 
   @Field()
-  recipientId: string
+  firstMessageContent: string
 }

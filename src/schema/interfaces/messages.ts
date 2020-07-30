@@ -3,12 +3,12 @@ import { Message } from '@entities/message'
 
 @ObjectType()
 export class MessageResponse {
-  @Field({ nullable: false })
+  @Field(() => Message, { nullable: false })
   message: Message
 }
 
 @ObjectType()
 export class MessagesResponse {
-  @Field({ nullable: false })
+  @Field(() => [Message], { nullable: false })
   messages: Message[]
 }

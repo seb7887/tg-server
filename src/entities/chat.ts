@@ -31,9 +31,16 @@ export class Chat extends BaseEntity {
   @JoinTable({
     name: 'chat_participants',
     joinColumn: {
+      name: 'chat_id',
+      referencedColumnName: 'id',
+    },
+    inverseJoinColumn: {
       name: 'participant',
       referencedColumnName: 'id',
     },
   })
   participants: User[]
+
+  @Field(() => Message)
+  lastMessage: Message
 }
