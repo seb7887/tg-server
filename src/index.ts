@@ -17,6 +17,10 @@ const startServer = async () => {
       req,
       res,
     }),
+    cors: {
+      origin: '*',
+      credentials: true,
+    },
   })
 
   await server.listen(process.env.PORT)
